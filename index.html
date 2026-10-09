@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    @media (max-width:767px) {
+        .main-container {
+            padding: 30px 5px;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid burlywood;
+        max-width: 500px;
+        height: 300px;
+        margin: 15vw auto;
+    }
+
+    p {
+        font-family: "Sora", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    button {
+        border: 1px solid burlywood;
+        background-color: white;
+        font-family: "Sora", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        /* background-color: burlywood; */
+        color: burlywood;
+    }
+</style>
+
+<body>
+    <div class="main-container">
+        <p>Rock Paper Scissors</p>
+        <div class="btn-container">
+            <button onclick="
+        const computerMove = Math.random();
+        let computerResult = '';
+        if(computerMove >= 0 && computerMove < 1/3){
+            computerResult = 'rock'
+        }
+        else if(computerMove >= 1/3 && computerMove < 2/3){
+            computerResult = 'paper'
+        }
+        else if(computerMove >= 2/3 && computerMove < 1){
+            computerResult = 'scissors'
+        }
+        
+        let gameResult = '';
+        if(computerResult === 'rock'){
+                gameResult = 'Tie'
+        }
+        else if(computerResult === 'paper'){
+                gameResult = 'You Lose'
+        }
+        else if(computerResult === 'scissors'){
+                gameResult = 'You win'
+        }
+
+        alert(`You picked Rock. Computer picked ${computerResult}. ${gameResult}`)
+    
+    ">Rock</button>
+
+            <button onclick="
+        const computerMove2 = Math.random();
+        let computerResult2 = '';
+        if(computerMove2 >= 0 && computerMove2 < 1/3){
+            computerResult2 = 'rock'
+        }
+        else if(computerMove2 >= 1/3 && computerMove2 < 2/3){
+            computerResult2 = 'paper'
+        }
+        else if(computerMove2 >= 2/3 && computerMove2 < 1){
+            computerResult2 = 'scissors'
+        }
+        
+        let gameResult2 = '';
+        if(computerResult2 === 'rock'){
+                gameResult2 = 'You win'
+        }
+        else if(computerResult2 === 'paper'){
+                gameResult2 = 'You Tie'
+        }
+        else if(computerResult2 === 'scissors'){
+                gameResult2 = 'You Lose'
+        }
+
+        alert(`You picked Paper. Computer picked ${computerResult2}. ${gameResult2}`)
+    
+    ">Paper</button>
+            <button onclick="
+        const computerMove3 = Math.random();
+        let computerResult3 = '';
+        if(computerMove3 >= 0 && computerMove3 < 1/3){
+            computerResult3 = 'rock'
+        }
+        else if(computerMove3 >= 1/3 && computerMove3 < 2/3){
+            computerResult3 = 'paper'
+        }
+        else if(computerMove3 >= 2/3 && computerMove3 < 1){
+            computerResult3 = 'scissors'
+        }
+        
+        let gameResult3 = '';
+        if(computerResult3 === 'rock'){
+                gameResult3 = 'You Lose'
+        }
+        else if(computerResult3 === 'paper'){
+                gameResult3 = 'You Win'
+        }
+        else if(computerResult3 === 'scissors'){
+                gameResult3 = 'Tie'
+        }
+
+        alert(`You picked Scissors. Computer picked ${computerResult3}. ${gameResult3}`)
+    
+    ">Scissors</button>
+        </div>
+    </div>
+</body>
+
+</html>
